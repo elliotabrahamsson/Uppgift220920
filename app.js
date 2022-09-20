@@ -28,5 +28,9 @@ Add = () => {
         AdressDetail = document.createElement('li');
         AdressDetail.innerHTML = person.Adress;
         CustomerList.appendChild(AdressDetail);
+
+        Space = document.createElement('br');
+        Space.innerHTML = ' ';
+        CustomerList.appendChild(Space);
     });
 }
