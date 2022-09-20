@@ -6,10 +6,10 @@ var Person = {
 }
 
 Add = () => {
-    Name = document.getElementById('namn').value;
-    Phone = document.getElementById('telefonnummer').value;
-    Adress = document.getElementById('Leveransadress').value;
-    Person = {Name: Name, Phone: Phone, Adress: Adress};
+    FullName = document.getElementById('namn').value;
+    PhoneNmbr = document.getElementById('telefonnummer').value;
+    RecAdress = document.getElementById('Leveransadress').value;
+    Person = {Name: FullName, Phone: PhoneNmbr, Adress: RecAdress};
     Customers.push(Person);
 
     CustomerList = document.getElementById('customers');
@@ -18,19 +18,16 @@ Add = () => {
 
     Customers.forEach (person => {
         NameDetail = document.createElement('li');
-        NameDetail.innerHTML = person.Name;
+        NameDetail.innerHTML = 'Personnamn: ' + person.Name;
         CustomerList.appendChild(NameDetail);
 
         PhoneDetail = document.createElement('li');
-        PhoneDetail.innerHTML = person.Phone;
+        PhoneDetail.innerHTML = 'Telefonnummer: ' + person.Phone;
         CustomerList.appendChild(PhoneDetail);
-
-        AdressDetail = document.createElement('li');
-        AdressDetail.innerHTML = person.Adress;
-        CustomerList.appendChild(AdressDetail);
 
         Space = document.createElement('br');
         Space.innerHTML = ' ';
         CustomerList.appendChild(Space);
     });
+
 }
