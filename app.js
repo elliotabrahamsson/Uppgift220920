@@ -31,3 +31,11 @@ Add = () => {
     });
 
 }
+
+Search = () => {
+    var Search = document.getElementById('search').value;
+    var outprint = document.getElementById('outprint');
+
+    Search -= 1;
+    outprint.innerHTML = (Customers[outprint]);
+}
