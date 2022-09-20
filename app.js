@@ -37,5 +37,5 @@ Search = () => {
     var outprint = document.getElementById('outprint');
 
     Search -= 1;
-    outprint.innerHTML = (Customers[outprint]);
+    outprint.innerHTML = Customers.toString(outprint);
 }
