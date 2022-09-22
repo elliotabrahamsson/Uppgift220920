@@ -20,12 +20,8 @@ Add = () => {
 
     Customers.forEach (person => {
         NameDetail = document.createElement('li');
-        NameDetail.innerHTML = 'Personnamn: ' + person.Name;
+        NameDetail.innerHTML = 'Information has been added';
         CustomerList.appendChild(NameDetail);
-
-        PhoneDetail = document.createElement('li');
-        PhoneDetail.innerHTML = 'Telefonnummer: ' + person.Phone;
-        CustomerList.appendChild(PhoneDetail);
 
         Space = document.createElement('br');
         Space.innerHTML = ' ';
