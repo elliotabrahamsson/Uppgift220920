@@ -2,14 +2,16 @@ var Customers = [];
 var Person = {
     Name:'',
     Phone:'',
-    Adress:''
+    Adress:'',
+    Email: ''
 }
 
 Add = () => {
     FullName = document.getElementById('namn').value;
     PhoneNmbr = document.getElementById('telefonnummer').value;
     RecAdress = document.getElementById('Leveransadress').value;
-    Person = {Name: FullName, Phone: PhoneNmbr, Adress: RecAdress};
+    Email = document.getElementById('Email').value;
+    Person = {Name: FullName, Phone: PhoneNmbr, Adress: RecAdress, Email: Email};
     Customers.push(Person);
 
     CustomerList = document.getElementById('customers');
