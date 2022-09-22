@@ -18,7 +18,7 @@ Add = () => {
 
     CustomerList.innerHTML ='';
 
-    Customers.forEach (person => {
+    Customers.forEach (_person => {
         InformationDisplay = document.createElement('p');
         InformationDisplay.innerHTML = 'Added to list';
         CustomerList.appendChild(InformationDisplay);
@@ -32,7 +32,7 @@ Add = () => {
 
 }
 
-Show = (Add) => {
+Show = () => {
     Customers.forEach (person => {
         NameDetail = document.createElement('li');
         NameDetail.innerHTML = 'Customername: ' + person.Name;
@@ -50,6 +50,11 @@ Show = (Add) => {
         EmailDetail.innerHTML = 'Email: ' + person.Email;
         CustomerList.appendChild(EmailDetail); 
 
+        EmailLink = document.createElement('a')
+        EmailLink.setAttribute ("href", "mailto:" + person.Email);
+        EmailLink.innerHTML = ' Mail now';
+        EmailDetail.appendChild(EmailLink);
+
         Space = document.createElement('br');
         Space.innerHTML = ' ';
         CustomerList.appendChild(Space);
@@ -59,9 +64,10 @@ Show = (Add) => {
 }
 
 Search = () => {
-    var Search = document.getElementById('search').value;
+    var Search = document.getElementById('search');
     var outprint = document.getElementById('outprint');
 
-    Search -= 1;
-    outprint.innerHTML = Customers.toString(outprint);
+   
+    let find = Customers.find(person => person.EmailDetail);
+    outprint.innerHTML = find;
 }
