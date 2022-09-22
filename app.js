@@ -19,15 +19,43 @@ Add = () => {
     CustomerList.innerHTML ='';
 
     Customers.forEach (person => {
-        NameDetail = document.createElement('li');
-        NameDetail.innerHTML = 'Information has been added';
-        CustomerList.appendChild(NameDetail);
+        InformationDisplay = document.createElement('p');
+        InformationDisplay.innerHTML = 'Added to list';
+        CustomerList.appendChild(InformationDisplay);
 
         Space = document.createElement('br');
         Space.innerHTML = ' ';
         CustomerList.appendChild(Space);
     });
 
+    
+
+}
+
+Show = (Add) => {
+    Customers.forEach (person => {
+        NameDetail = document.createElement('li');
+        NameDetail.innerHTML = 'Customername: ' + person.Name;
+        CustomerList.appendChild(NameDetail);
+    
+        PhoneDetail = document.createElement('li');
+        PhoneDetail.innerHTML = 'Phone Number: ' + person.Phone;
+        CustomerList.appendChild(PhoneDetail);
+    
+        AdressDetail = document.createElement('li');
+        AdressDetail.innerHTML = 'Adress: ' + person.Adress;
+        CustomerList.appendChild(AdressDetail);
+
+        EmailDetail = document.createElement('li');
+        EmailDetail.innerHTML = 'Email: ' + person.Email;
+        CustomerList.appendChild(EmailDetail); 
+
+        Space = document.createElement('br');
+        Space.innerHTML = ' ';
+        CustomerList.appendChild(Space);
+    });
+
+    
 }
 
 Search = () => {
