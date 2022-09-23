@@ -68,6 +68,6 @@ Search = () => {
     var outprint = document.getElementById('outprint');
 
    
-    let find = Customers.find(person => person.EmailDetail);
+    let find = Customers.find(person => person.EmailDetail == Search.value);
     outprint.innerHTML = find;
 }
